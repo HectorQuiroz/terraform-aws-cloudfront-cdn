@@ -42,3 +42,8 @@ output "logs" {
   value       = module.logs
   description = "Logs resource"
 }
+
+output "bucket-id-logs" {
+  value       = module.logs.bucket_id
+  description = "Bucket ID for Logs"
+}
