@@ -250,7 +250,9 @@ resource "aws_cloudfront_distribution" "default" {
   }
 
   web_acl_id = var.web_acl_id
-
+  lifecycle {
+    ignore_changes = [web_acl_id]
+  }
   restrictions {
     geo_restriction {
       restriction_type = var.geo_restriction_type
